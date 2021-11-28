@@ -1,0 +1,17 @@
+<div class="menu">
+  <h2>
+    Du lundi au Samedi uniquement le midi, nous vous proposont Menus et plat du
+    jour
+  </h2>
+</div>
+<div class="menuList">
+  <div class="cards" *ngFor="let menu of menus">
+    <h4>{{ menu.title }}</h4>
+    <p>{{ menu.description }}</p>
+    <p>{{ menu.price }} €</p>
+  </div>
+  <button type="button" [routerLink]="['/la-carte']">Retour</button>
+
+</div>
+
+

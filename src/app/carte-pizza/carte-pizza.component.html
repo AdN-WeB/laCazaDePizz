@@ -1,0 +1,10 @@
+<div class="cartePizza">
+  <h2>La Bande</h2>
+</div>
+<div class="pizzaList">
+<div class="pizza" *ngFor="let pizza of pizzas">
+ <h4>{{ pizza.title }}</h4>
+ <p> {{ pizza.descripition }}</p>
+ <p id="price">{{ pizza.price }} €</p>
+</div>
+</div>

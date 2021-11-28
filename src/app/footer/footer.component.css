@@ -1,0 +1,36 @@
+.footer {
+  color: rgb(0, 0, 0);
+  background-color: rgb(161, 0, 0);
+  gap: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.copyright a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.reseau {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.reseau a {
+  width: 25%;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.img img {
+  width: 80%;
+}
+
