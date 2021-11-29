@@ -17,6 +17,7 @@ import { CarteMenuComponent } from './carte-menu/carte-menu.component';
 import { DessertsComponent } from './desserts/desserts.component';
 import { BoissonsComponent } from './boissons/boissons.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     DessertsComponent,
     BoissonsComponent,
     NotFoundComponent,
+    NavBarComponent,
     
   ],
   imports: [
