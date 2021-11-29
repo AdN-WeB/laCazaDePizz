@@ -29,7 +29,6 @@
 }
 .reseau a {
   width: 25%;
-  
 }
 .img {
   display: flex;
@@ -37,6 +36,6 @@
   gap: 1rem;
 }
 .img img {
-  width: 80%;
+  width: 70%;
 }
 
