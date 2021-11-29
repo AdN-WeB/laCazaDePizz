@@ -1,13 +1,11 @@
-<div class="cartePanzerotti">
-    <h2>(Policiers)Panzerotti</h2>
-    <li><u>Rubio</u>:Viande hachée ricotta, Tomate, Mozza.......................9€</li>
-    <li><u>Prieto</u>:Tomate, Mozza, poivrons, chorizo..........................9€</li>
-    <li><u>Murillo</u>:Tomate, Mozza............................................7€</li>
-    <li><u>Alberto</u>:Tomate, Mozza, Jambon....................................8€</li>
-    <li><u>Tamayo</u>:Tomate, 4 Fromages........................................9€</li>
-    <li><u>Gandilla</u>:Tomate Poulet, Mozza..................................8,5€</li>
-    <li><u>Sierra</u>:Tomate, légumes, Mozza..................................8,5€</li>
-    <li><u>Suarez</u>:Tomate, mortadelle, mozza, taleggio.......................9€</li>
+<div class="main">
+  <h2>Policiers</h2>
+  </div>
+  <div class="cartePanzerotti">
+    <div class="panzerottis" *ngFor="let panzerotti of panzerottis">
+      <h4>{{ panzerotti.title }}</h4>
+      <p>{{ panzerotti.description }}</p>
+      <p id="price">{{ panzerotti.price}}€</p>
   </div>
   <button type="button" [routerLink]="['/la-carte']">Retour</button>
-
+</div>
