@@ -1,1 +1,14 @@
-<button type="button" [routerLink]="['/la-carte']">Retour</button>
+<div class="main">
+    <h2>Boissons</h2>
+</div>
+<div class="boissonList">
+    <div class="boisson" *ngFor="let boisson of boissons">
+      <h4>{{ boisson.title }}</h4>
+      <p>{{ boisson.description }}</p>
+      <p id="price">{{ boisson.price}}€</p>
+  </div>
+  <button type="button" [routerLink]="['/la-carte']">Retour</button>
+</div>
+
+
+
