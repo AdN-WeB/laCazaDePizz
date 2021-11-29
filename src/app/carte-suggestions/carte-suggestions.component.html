@@ -1,1 +1,12 @@
-<button type="button" [routerLink]="['/la-carte']">Retour</button>
+<div class="main">
+  <h2>Suggestions</h2>
+
+  <div class="sugList">
+    <div class="sug" *ngFor="let suggestion of suggestions">
+      <h4>{{ suggestion.title }}</h4>
+      <p>{{ suggestion.description }}</p>
+      <p id="price">{{ suggestion.price }} €</p>
+    </div>
+    <button type="button" [routerLink]="['/la-carte']">Retour</button>
+  </div>
+</div>
