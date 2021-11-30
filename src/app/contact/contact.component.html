@@ -1,22 +1,85 @@
-<form>
-  <div class="form-group">
+<div class="main">
+  <h2>Besoin de nous contacter?</h2>
+</div>
+<form
+  class="formulaire"
+  (ngSubmit)="myForm.valid && onsubmit($event) && clear()"
+  [formGroup]="contactUs"
+  #myForm="ngForm"
+>
+  <div class="name">
+    <label for="name"></label>
+    <input
+      type="text"
+      formControlName="nameForm"
+      id="name"
+      required
+      placeholder="Nom"
+    />
+  </div>
+  <div *ngIf="myForm.submitted && contactUs.controls.nameForm.errors?.required">
+    <p class="danger">Merci de renseigner votre nom</p>
+  </div>
+  <div
+    *ngIf="myForm.submitted && contactUs.controls.nameForm.errors?.minlength"
+  >
+    <p class="danger">Votre nom doit contenir au moins 3 lettres</p>
+  </div>
+  <div class="email">
     <label for="email"></label>
     <input
       type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      placeholder="Votre email"
+      id="email"
+      formControlName="emailForm"
+      aria-describedby="emailHelp"
+      placeholder="@"
       required
     />
   </div>
-  <div class="form-group">
-    <label for="msg"></label>
-    <textarea
-      class="form-control"
-      placeholder="Entrez votre message"
-      rows="5"
-      required
-    ></textarea>
+  <div
+    *ngIf="myForm.submitted && contactUs.controls.emailForm.errors?.required"
+  >
+    <p class="danger">Votre email est requis "example@example.com"</p>
   </div>
-  <button type="submit" (click)="onSubmit()">Envoyer</button>
+  <div *ngIf="myForm.submitted && contactUs.controls.emailForm.errors?.email">
+    <p class="danger">Votre email n'est pas correcte "example@example.com"</p>
+  </div>
+  <div
+    *ngIf="myForm.submitted && contactUs.controls.emailForm.errors?.minlength"
+  >
+    <p class="danger">Votre email est trop courte "example@example.com"</p>
+  </div>
+  <div class="message">
+    <label for="message"></label>
+    <textarea
+      type="text"
+      formControlName="msgForm"
+      id="msg"
+      placeholder="Taper votre message içi"
+      required
+      rows="5"
+    ></textarea>
+    </div>
+    <div
+      *ngIf="myForm.submitted && contactUs.controls.msgForm.errors?.maxlength"
+    >
+      <p class="danger">
+        Votre message est trop long, prenons du temps et appeler nous
+      </p>
+    </div>
+    <div
+      *ngIf="myForm.submitted && contactUs.controls.msgForm.errors?.required"
+    >
+      <p class="danger">Un message est requis</p>
+    </div>
+    <div
+      *ngIf="myForm.submitted && contactUs.controls.msgForm.errors?.minlength"
+    >
+      <p class="danger">Votre message est trop court</p>
+    </div>
+  <div class="buttonEdit">
+    <button type="submit">Envoyer</button>
+    <button type="reset" (click)="clear()">Effacer</button>
+    <button type="button" (click)="redirected()">Retour</button>
+  </div>
 </form>

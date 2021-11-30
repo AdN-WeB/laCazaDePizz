@@ -8,7 +8,7 @@
   <div class="cards" *ngFor="let menu of menus">
     <h4>{{ menu.title }}</h4>
     <p>{{ menu.description }}</p>
-    <p>{{ menu.price }} €</p>
+    <p id="price">{{ menu.price }} €</p>
   </div>
   <button type="button" [routerLink]="['/la-carte']">Retour</button>
 
